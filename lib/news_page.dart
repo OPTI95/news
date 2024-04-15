@@ -19,13 +19,13 @@ class _NewsPageState extends State<NewsPage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text("Рандом цифра:"),
+            const Text("Рандом цифра:"),
             Text("${random.nextInt(100000)}"),
             ElevatedButton(
                 onPressed: () {
                   setState(() {});
                 },
-                child: Text("Получить новое число"))
+                child: const Text("Получить новое число"))
           ],
         ),
       ),
