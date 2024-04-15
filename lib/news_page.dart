@@ -25,7 +25,7 @@ class _NewsPageState extends State<NewsPage> {
                 onPressed: () {
                   setState(() {});
                 },
-                child: Text("Получить"))
+                child: Text("Получить новое число"))
           ],
         ),
       ),
