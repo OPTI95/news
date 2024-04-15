@@ -1,0 +1,34 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+class NewsPage extends StatefulWidget {
+  const NewsPage({super.key});
+
+  @override
+  State<NewsPage> createState() => _NewsPageState();
+}
+
+class _NewsPageState extends State<NewsPage> {
+  Random random = Random();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text("Рандом цифра:"),
+            Text("${random.nextInt(100000)}"),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {});
+                },
+                child: Text("Получить"))
+          ],
+        ),
+      ),
+    );
+  }
+}

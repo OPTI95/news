@@ -1,0 +1,24 @@
+name: Flutter Syntax Check
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    name: Analyze Flutter Syntax
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.19.1'
+
+    - name: Run Flutter Analyze
+      run: flutter analyze
+
